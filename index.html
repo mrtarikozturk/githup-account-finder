@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="GitHub Account Finder">
+    <meta name="keywords" content="GitHub Account Finder">
+    <meta name="author" content="Mr.Root">
+    <title>Github Account Finder</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <style>
+        .borderzero {
+            border: 0 none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container searchContainer">
+        <div class="search card card-body">
+            <h3>Github Kullanıcılarını Arayın</h3>
+            <p class="lead">
+                Bir kullanıcı adı girin ve kullanıcının bilgilerine ulaşın!
+            </p>
+            <form id="github-form">
+                <input type="text" name="githubname" id="githubname" class="form-control"
+                    placeholder="Github Kullanıcı adı" />
+                <br />
+                <button type="submit" class="btn btn-dark">Ara</button>
+            </form>
+            <br /><br />
+        </div>
+        <br />
+
+        <div id="profile">
+            <!-- <div class="card card-body mb-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="" target = "_blank">
+                        <img class="img-fluid mb-2" src="https://upload.wikimedia.org/wikipedia/tr/a/a0/Cem_Karaca.jpg"> </a>
+                        <hr>
+                        <div id="fullName"><strong> Mustafa Murat Coşkun</strong></div>
+                        <hr>
+                        <div id="bio">asdasdasdsad</div>
+                    </div>
+                    <div class="col-md-8">
+                        <button class="btn btn-secondary">Takipçi<span class="badge badge-light"></span></button>
+                        <button class="btn btn-info">Takip Edilen<span class="badge badge-light"></span></button>
+                        <button class="btn btn-danger">Repolar<span class="badge badge-light"></span></button>
+                        <hr>
+                        <ul class="list-group">
+                            <li class="list-group-item borderzero">
+                                <img src="images/company.png" width="30px"> <span id="company">Naber</span>                                    
+                            </li>
+                            <li class="list-group-item borderzero">
+                                <img src="images/location.png" width="30px"> <span id = "location">sadasdsad</a>
+                            </li>
+                            <li class="list-group-item borderzero">
+                                <img src="images/mail.png" width="30px"> <span id="company">Naber</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div> 
+            </div> -->
+
+            <h3 class="page-heading mb-3">En son repolar</h3>
+            <!-- <div id="repos">
+          <div class="mb-2 card-body">
+            <div class="row">
+              <div class="col-md-2">
+                <span></span>
+                <a href="#" target="_blank" id="repoName"></a>
+              </div>
+              <div class="col-md-6">
+                <button class="btn btn-secondary">
+                  Starlar <span class="badge badge-light" id="repoStar"></span>
+                </button>
+                <button class="btn btn-info">
+                  Forklar<span class="badge badge-light" id="repoFork"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+            <h3 class="page-heading mb-3">Son Aramalar</h3>
+            <div id="lastSearch" style="margin-bottom: 100px">
+                <ul class="list-group" id="last-users">
+                    <!-- <li class="list-group-item">asdaskdjkasjkşdjşasjd</li> -->
+                </ul>
+                <hr />
+                <button id="clear-last-users" class="btn btn-dark">
+                    Son Arananları Temizle
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/github.js"></script>
+    <script src="./js/storage.js"></script>
+    <script src="./js/ui.js"></script>
+    <script src="./js/app.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

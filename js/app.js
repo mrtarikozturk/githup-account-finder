@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', getAllSearched);
 
 //Inits
 const github = new Github();
+const ui = new UI();
 
 function getData(e) {
 
@@ -24,13 +25,13 @@ function getData(e) {
                 if (response.user.message === 'Not Found') {
                     console.log('Hata');
                 } else {
-                    console.log(reponse);
+                    ui.displayUserInfo(response.user);
                 }
             })
             .catch(err => console.log(err));
     }
 
-
+    ui.clearInput();
 
     e.preventDefault();
 }

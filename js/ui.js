@@ -18,7 +18,7 @@ class UI {
                 <div class="row">
                     <div class="col-md-4">
                         <a href="${user.html_url}" target = "_blank">
-                        <img class="img-fluid mb-2 rounded-circle " src="${user.avatar_url}"> </a>
+                        <img class="img-fluid mb-2 rounded-circle" src="${user.avatar_url}"> </a>
                         <hr>
                         <div id="fullName"><strong>${user.name}</strong></div>
                         <hr>

@@ -18,17 +18,17 @@ function getData(e) {
     let username = nameInput.value.trim();
 
     if (username === '') {
-        alert('Lutfen gecerli bir kullanici adi giriniz...');
+        ui.showMessage('Please enter a valid username...');
     } else {
         github.getData(username)
             .then(response => {
                 if (response.user.message === 'Not Found') {
-                    console.log('Hata');
+                    ui.showMessage("Can't find username");
                 } else {
                     ui.displayUserInfo(response.user);
                 }
             })
-            .catch(err => console.log(err));
+            .catch(err => ui.showMessage(err));
     }
 
     ui.clearInput();

@@ -4,6 +4,8 @@ class UI {
         this.repoCard = document.querySelector('repos');
         this.lastUsersElement = document.querySelector('#last-users');
         this.inputElement = document.querySelector('#githubname');
+        this.modalMessageElement = document.querySelector('.modal-body');
+        this.modal = document.querySelector('#exampleModal');
     }
 
     clearInput() {
@@ -43,5 +45,10 @@ class UI {
                 </div> 
             </div>
         `;
+    }
+
+    showMessage(message) {
+        this.modalMessageElement.textContent = message;
+        $('#exampleModal').modal('show')
     }
 }

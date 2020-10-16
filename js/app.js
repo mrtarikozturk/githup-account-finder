@@ -26,6 +26,7 @@ function getData(e) {
                     ui.showMessage("Can't find username");
                 } else {
                     ui.displayUserInfo(response.user);
+                    ui.displayRepoInfo(response.repo);
                 }
             })
             .catch(err => ui.showMessage(err));

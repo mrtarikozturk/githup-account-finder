@@ -1,7 +1,7 @@
 class UI {
     constructor() {
         this.profileCard = document.querySelector('#profile');
-        this.repoCard = document.querySelector('repos');
+        this.repoCardContainer = document.querySelector('#repos');
         this.lastUsersElement = document.querySelector('#last-users');
         this.inputElement = document.querySelector('#githubname');
         this.modalMessageElement = document.querySelector('.modal-body');
@@ -51,4 +51,30 @@ class UI {
         this.modalMessageElement.textContent = message;
         $('#exampleModal').modal('show')
     }
+
+    displayRepoInfo(repos) {
+        this.repoCardContainer.innerHTML = '';
+
+        repos.forEach(repo => {
+            this.repoCardContainer.innerHTML += `
+            <div class="mb-2 card-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <a href="${repo.html_url}" target="_blank" id="repoName"></a>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-secondary">
+                                Starlar <span class="badge badge-light" id="repoStar"></span>
+                            </button>
+                            <button class="btn btn-info">
+                                Forklar<span class="badge badge-light" id="repoFork"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+            `;
+        });
+    }
+
 }

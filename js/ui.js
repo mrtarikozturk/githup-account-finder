@@ -84,4 +84,9 @@ class UI {
         `;
     }
 
+    clearAll() {
+        while (this.lastUsersElement.firstElementChild !== null)
+            this.lastUsersElement.firstElementChild.remove();
+    }
+
 }

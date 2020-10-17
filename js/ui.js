@@ -77,4 +77,11 @@ class UI {
         });
     }
 
+    addUserName(userName) {
+
+        this.lastUsersElement.innerHTML += `
+        <li class="list-group-item">${userName}</li>
+        `;
+    }
+
 }

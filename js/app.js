@@ -25,6 +25,7 @@ function getData(e) {
                 if (response.user.message === 'Not Found') {
                     ui.showMessage("Can't find username");
                 } else {
+                    if (Storage.add(username)) ui.addUserName(username);
                     ui.displayUserInfo(response.user);
                     ui.displayRepoInfo(response.repo);
                 }
@@ -44,4 +45,5 @@ function clearAllSearched() {
 
 function getAllSearched() {
 
+    Storage.get().forEach(item => ui.addUserName(item));
 }

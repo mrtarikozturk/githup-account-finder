@@ -5,7 +5,6 @@ class Storage {
         else users = JSON.parse(localStorage.getItem('users'));
 
         return users;
-
     }
 
     static add(userName) {
@@ -15,11 +14,9 @@ class Storage {
             localStorage.setItem('users', JSON.stringify(users));
             return true;
         }
-
     }
 
     static clear() {
-
         localStorage.removeItem('users');
     }
 }
